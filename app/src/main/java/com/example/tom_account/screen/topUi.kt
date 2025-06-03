@@ -93,7 +93,7 @@ fun TopUi() {
                     }
                 }
                 Box(
-                    modifier = Modifier
+                    modifier = Modifier.offset(y=-10.dp)
                         .size(113.dp, 18.dp)
                 ) {
                     Row(
