@@ -44,6 +44,7 @@ fun fav_food() {
             // Title Row
             Row(
                 modifier = Modifier
+
                     .width(120.dp)
                     .height(30.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -65,6 +66,7 @@ fun fav_food() {
             // Settings Item Row
             Row(
                 modifier = Modifier
+                    .offset(-15.dp)
                     .width(360.dp)
                     .height(40.dp)
                     .padding(horizontal = 16.dp),
@@ -112,6 +114,7 @@ fun fav_food() {
 
             Row(
                 modifier = Modifier
+                    .offset(-15.dp)
                     .width(360.dp)
                     .height(40.dp)
                     .padding(horizontal = 16.dp),
@@ -159,6 +162,7 @@ fun fav_food() {
 
             Row(
                 modifier = Modifier
+                    .offset(-15.dp)
                     .width(360.dp)
                     .height(40.dp)
                     .padding(horizontal = 16.dp),

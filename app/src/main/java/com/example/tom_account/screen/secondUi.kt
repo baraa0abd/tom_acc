@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.sp
 fun secondUi() {
     Box(
         modifier = Modifier
-            .size(width = 460.dp, height = 821.dp)
+            .size(width = 550.dp, height = 1000.dp)
             .offset(y = 206.dp)
             .clip(RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp))
             .background(Color(0xFFEEF4F6))
@@ -36,16 +36,16 @@ fun secondUi() {
     {
         Row(
             modifier = Modifier
-                .offset(15.dp)
+                .offset(-5.dp)
                 .padding(top = 23.dp, start = 16.dp)
-                .width(328.dp)
-                .height(124.dp),
+                .width(350.dp)
+                .height(150.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Box(
                 modifier = Modifier
-                    .width(160.dp)
-                    .height(58.dp)
+                    .width(170.dp)
+                    .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
                     .background(Color(0xFFD0E5F0)) // Replace with your actual background
                     .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
@@ -93,9 +93,9 @@ fun secondUi() {
                 }
             }
             Box(
-                modifier = Modifier
-                    .width(160.dp)
-                    .height(58.dp)
+                modifier = Modifier.offset(x=1.dp)
+                    .width(170.dp)
+                    .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
                     .background(Color(0xFFD0E5F0)) // Replace with your actual background
                     .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
@@ -148,16 +148,17 @@ fun secondUi() {
         }
         Row(
             modifier = Modifier
-                .offset(x=15.dp,y = 66.dp)
+                .offset(-5.dp)
                 .padding(top = 23.dp, start = 16.dp)
-                .width(328.dp)
-                .height(58.dp),
+                .width(350.dp)
+                .height(150.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Box(
                 modifier = Modifier
-                    .width(160.dp)
-                    .height(58.dp)
+                    .offset(y=73.dp)
+                    .width(170.dp)
+                    .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
                     .background(Color(0xFFD0E5F0)) // Replace with your actual background
                     .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
@@ -205,9 +206,9 @@ fun secondUi() {
                 }
             }
             Box(
-                modifier = Modifier
-                    .width(160.dp)
-                    .height(58.dp)
+                modifier = Modifier.offset(y=75.dp)
+                    .width(170.dp)
+                    .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
                     .background(Color(0xFFD0E5F0)) // Replace with your actual background
                     .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
@@ -254,8 +255,10 @@ fun secondUi() {
                     }
                 }
             }
-        }
 
+
+            // Repeat similar `Box` here to make the remaining 3 items
+        }
         tom_setting()
         fav_food()
 

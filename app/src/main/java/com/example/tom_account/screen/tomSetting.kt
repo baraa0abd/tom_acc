@@ -67,6 +67,7 @@ fun tom_setting() {
             // Settings Item Row
             Row(
                 modifier = Modifier
+                    .offset(-15.dp)
                     .width(360.dp)
                     .height(40.dp)
                     .padding(horizontal = 16.dp),
@@ -114,6 +115,7 @@ fun tom_setting() {
 
             Row(
                 modifier = Modifier
+                    .offset(-15.dp)
                     .width(360.dp)
                     .height(40.dp)
                     .padding(horizontal = 16.dp),
@@ -161,6 +163,7 @@ fun tom_setting() {
 
             Row(
                 modifier = Modifier
+                    .offset(-15.dp)
                     .width(360.dp)
                     .height(40.dp)
                     .padding(horizontal = 16.dp),

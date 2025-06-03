@@ -35,7 +35,7 @@ fun TopUi() {
     // Outer blue Box - matching target dimensions and removing the y-offset
     Box(
         modifier = Modifier
-            .size(400.dp, 250.dp)
+            .size(500.dp, 250.dp)
 
             .background(Color(0xFF226993)),
         contentAlignment = Alignment.TopCenter
