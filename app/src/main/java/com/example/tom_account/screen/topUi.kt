@@ -1,21 +1,25 @@
 package com.example.tom_account.screen
 
-import androidx.compose.foundation.BorderStroke
+// RoundedCornerShape is still used by your original code, kept if needed elsewhere, but not for circular profile pic
+// import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.* // Import all from layout
-import androidx.compose.foundation.shape.CircleShape // Import CircleShape
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-// RoundedCornerShape is still used by your original code, kept if needed elsewhere, but not for circular profile pic
-// import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip // Import clip
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -31,8 +35,8 @@ fun TopUi() {
     // Outer blue Box - matching target dimensions and removing the y-offset
     Box(
         modifier = Modifier
-            .size(400.dp,250.dp)
-            .offset(y = (13).dp)
+            .size(400.dp, 250.dp)
+
             .background(Color(0xFF226993)),
         contentAlignment = Alignment.TopCenter
     ) {
@@ -40,7 +44,7 @@ fun TopUi() {
             modifier = Modifier
                 .size(width = 113.dp, height = 170.dp) // Correctly sets width and height
                 .offset(x = 0.dp, y = 25.dp)          // This offset is different from your specs
-        ){
+        ) {
             Column(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.spacedBy(4.dp),
@@ -67,8 +71,8 @@ fun TopUi() {
                 }
                 Box(
                     modifier = Modifier
-                        .size(113.dp,45.dp)
-                ){
+                        .size(113.dp, 45.dp)
+                ) {
                     Row(
                         modifier = Modifier
                             .fillMaxSize(),
@@ -90,8 +94,8 @@ fun TopUi() {
                 }
                 Box(
                     modifier = Modifier
-                        .size(113.dp,18.dp)
-                ){
+                        .size(113.dp, 18.dp)
+                ) {
                     Row(
                         modifier = Modifier
                             .fillMaxSize(),
@@ -119,17 +123,16 @@ fun TopUi() {
                     modifier = Modifier
                         .size(width = 97.dp, height = 25.dp)
                         .clip(RoundedCornerShape(40.dp))
-                ){
+                ) {
                     Row(
                         modifier = Modifier
                             .fillMaxSize()
                             .background(
                                 color = Color(0x1FFFFFFF)
-                                )
-                            .padding(start = 12.dp, top = 6.dp, end = 12.dp, bottom = 6.dp)
-                            ,
+                            )
+                            .padding(start = 12.dp, top = 6.dp, end = 12.dp, bottom = 6.dp),
                         horizontalArrangement = Arrangement.spacedBy(10.dp)
-                    ){
+                    ) {
                         Text(
                             text = "Edit foolishness",
                             style = TextStyle(
