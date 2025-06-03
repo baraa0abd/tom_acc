@@ -253,12 +253,9 @@ fun secondUi() {
                     }
                 }
             }
-
-
-            // Repeat similar `Box` here to make the remaining 3 items
         }
 
-        Row() { /*for tom setting*/ }
+        tom_setting()
         Row() { /*fav food*/ }
 
     }
