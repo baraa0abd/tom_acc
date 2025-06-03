@@ -93,7 +93,7 @@ fun TopUi() {
                     }
                 }
                 Box(
-                    modifier = Modifier.offset(y=-10.dp)
+                    modifier = Modifier.offset(y=-12.dp)
                         .size(113.dp, 18.dp)
                 ) {
                     Row(
@@ -120,7 +120,7 @@ fun TopUi() {
 //                border-radius: 40px;
 
                 Box(
-                    modifier = Modifier
+                    modifier = Modifier.offset(y=-7.dp)
                         .size(width = 97.dp, height = 25.dp)
                         .clip(RoundedCornerShape(40.dp))
                 ) {

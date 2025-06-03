@@ -35,7 +35,7 @@ fun fav_food() {
             .width(360.dp)
             .height(182.dp)
             .padding(8.dp)
-            .offset(x=25.dp,y=350.dp)
+            .offset(y=350.dp)
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
