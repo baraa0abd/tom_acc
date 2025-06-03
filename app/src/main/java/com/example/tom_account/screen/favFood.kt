@@ -29,18 +29,16 @@ import androidx.compose.ui.unit.sp
 import com.example.tom_account.R
 
 @Composable
-fun tom_setting() {
+fun fav_food() {
     Box(
         modifier = Modifier
             .width(360.dp)
             .height(182.dp)
             .padding(8.dp)
-            .offset(x=25.dp,y=171.dp)
+            .offset(x=25.dp,y=350.dp)
     ) {
         Column(
-            modifier = Modifier.fillMaxSize()
-
-                ,
+            modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             // Title Row
@@ -88,7 +86,7 @@ fun tom_setting() {
                             .size(24.dp)
                             .background(Color.White),
 
-                    )
+                        )
 
                 }
 

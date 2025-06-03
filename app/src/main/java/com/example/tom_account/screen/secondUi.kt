@@ -36,6 +36,7 @@ fun secondUi() {
     {
         Row(
             modifier = Modifier
+                .offset(15.dp)
                 .padding(top = 23.dp, start = 16.dp)
                 .width(328.dp)
                 .height(124.dp),
@@ -147,7 +148,7 @@ fun secondUi() {
         }
         Row(
             modifier = Modifier
-                .offset(y = 66.dp)
+                .offset(x=15.dp,y = 66.dp)
                 .padding(top = 23.dp, start = 16.dp)
                 .width(328.dp)
                 .height(58.dp),
@@ -256,7 +257,7 @@ fun secondUi() {
         }
 
         tom_setting()
-        Row() { /*fav food*/ }
+        fav_food()
 
     }
 
