@@ -39,7 +39,7 @@ fun fav_food() {
             .offset(y=370.dp)
     ) {
         Column(
-            modifier = Modifier.size(360.dp, 200.dp),
+            modifier = Modifier.size(360.dp, 270.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Row(
@@ -137,6 +137,7 @@ fun fav_food() {
                         modifier = Modifier
                             .size(24.dp)
                             .background(Color.White)
+
                     )
                 }
 
@@ -172,7 +173,7 @@ fun fav_food() {
                 // Icon Box
                 Box(
                     modifier = Modifier
-                        .size(40.dp)
+                        .size(40.dp , 50.dp)
                         .clip(RoundedCornerShape(8.dp))
                         .background(Color.White)
                         .offset(x = 1.25.dp, y = 3.dp), // Optional if you want to mimic top/left

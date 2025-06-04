@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.tom_account.screen.TopUi
+import com.example.tom_account.screen.buttom
 import com.example.tom_account.screen.secondUi
 
 class MainActivity : ComponentActivity() {
@@ -16,6 +17,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             TopUi()
             secondUi()
+            buttom()
+
         }
     }
 }
@@ -24,4 +27,6 @@ class MainActivity : ComponentActivity() {
 fun GreetingPreview() {
     TopUi()
     secondUi()
+    buttom()
+
 }

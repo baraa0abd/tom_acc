@@ -36,7 +36,7 @@ import com.example.tom_account.R
 fun secondUi() {
     Box(
         modifier = Modifier
-            .size(width = 550.dp, height = 1000.dp)
+            .size(width = 550.dp, height = 1500.dp)
             .offset(y = 206.dp)
             .clip(RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp))
             .background(Color(0xFFEEF4F6))
