@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -163,55 +164,57 @@ fun secondUi() {
                 .height(150.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
+
             Box(
                 modifier = Modifier
                     .offset(y = 73.dp)
                     .width(170.dp)
                     .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFD0E5F0)) // Replace with your actual background
-                    .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
+                    .background(Color(0xFFF2D9E7)) // Light green background
+                    .padding(horizontal = 12.dp, vertical = 8.dp)
             ) {
-                Column {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
+                Column() {
+                    Box(
+                        modifier = Modifier
+                            .size(40.dp)
+                            .clip(CircleShape),
+                        contentAlignment = Alignment.Center
                     ) {
-                        Text(
-                            text = "2M 12K",
+                        Image(
+                            painter = painterResource(id = R.drawable.img_9),
+                            contentDescription = "Cat icon",
                             modifier = Modifier
-                                .width(59.dp)
-                                .height(24.dp),
-                            style = TextStyle(
-                                fontWeight = FontWeight.SemiBold,
-                                fontSize = 16.sp,
-                                lineHeight = 16.sp,
-                                letterSpacing = 0.5.sp,
-                                textAlign = TextAlign.Center,
-                                color = Color(0x99121212) // #12121299
-                            )
+                                .fillMaxSize()
+                                .background(Color.White, shape = CircleShape)
+                                .clip(CircleShape)
                         )
                     }
-
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Text(
-                            text = "No. of quarrels",
-                            modifier = Modifier
-                                .width(88.dp)
-                                .height(18.dp),
-                            style = TextStyle(
-                                fontWeight = FontWeight.Medium,
-                                fontSize = 12.sp,
-                                lineHeight = 12.sp,
-                                letterSpacing = 0.5.sp,
-                                textAlign = TextAlign.Center,
-                                color = Color(0x5E121212) // #1212125E
-                            )
+                }
+                Column(
+                    modifier = Modifier
+                        .offset(40.dp)
+                    .size(84.dp,42.dp),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = "2M 12K",
+                        style = TextStyle(
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 16.sp,
+                            color = Color(0x99121212) // #121212 with 60% opacity
                         )
-                    }
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = "Hunting times",
+                        style = TextStyle(
+                            fontWeight = FontWeight.Medium,
+                            fontSize = 12.sp,
+                            color = Color(0x5E121212) // #121212 with 37% opacity
+                        )
+                    )
                 }
             }
             Box(
@@ -220,49 +223,50 @@ fun secondUi() {
                     .width(170.dp)
                     .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFD0E5F0)) // Replace with your actual background
-                    .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
+                    .background(Color(0xFFFAEDCF)) // Light green background
+                    .padding(horizontal = 12.dp, vertical = 8.dp)
             ) {
-                Column {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
+                Column() {
+                    Box(
+                        modifier = Modifier
+                            .size(40.dp)
+                            .clip(CircleShape),
+                        contentAlignment = Alignment.Center
                     ) {
-                        Text(
-                            text = "2M 12K",
+                        Image(
+                            painter = painterResource(id = R.drawable.img_8),
+                            contentDescription = "Cat icon",
                             modifier = Modifier
-                                .width(59.dp)
-                                .height(24.dp),
-                            style = TextStyle(
-                                fontWeight = FontWeight.SemiBold,
-                                fontSize = 16.sp,
-                                lineHeight = 16.sp,
-                                letterSpacing = 0.5.sp,
-                                textAlign = TextAlign.Center,
-                                color = Color(0x99121212) // #12121299
-                            )
+                                .fillMaxSize()
+                                .background(Color.White, shape = CircleShape)
+                                .clip(CircleShape)
                         )
                     }
-
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Text(
-                            text = "No. of quarrels",
-                            modifier = Modifier
-                                .width(88.dp)
-                                .height(18.dp),
-                            style = TextStyle(
-                                fontWeight = FontWeight.Medium,
-                                fontSize = 12.sp,
-                                lineHeight = 12.sp,
-                                letterSpacing = 0.5.sp,
-                                textAlign = TextAlign.Center,
-                                color = Color(0x5E121212) // #1212125E
-                            )
+                }
+                Column(
+                    modifier = Modifier
+                        .offset(5.dp)
+                        .fillMaxSize(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = "3M 7K",
+                        style = TextStyle(
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 16.sp,
+                            color = Color(0x99121212) // #121212 with 60% opacity
                         )
-                    }
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = "Heartbroken",
+                        style = TextStyle(
+                            fontWeight = FontWeight.Medium,
+                            fontSize = 12.sp,
+                            color = Color(0x5E121212) // #121212 with 37% opacity
+                        )
+                    )
                 }
             }
 
