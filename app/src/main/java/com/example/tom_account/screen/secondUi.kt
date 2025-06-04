@@ -1,15 +1,20 @@
 package com.example.tom_account.screen
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,12 +22,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.tom_account.R
 
 @Composable
 fun secondUi() {
@@ -36,7 +43,7 @@ fun secondUi() {
     {
         Row(
             modifier = Modifier
-                .offset(-5.dp)
+                .offset(x = (-5).dp)
                 .padding(top = 23.dp, start = 16.dp)
                 .width(350.dp)
                 .height(150.dp),
@@ -47,99 +54,101 @@ fun secondUi() {
                     .width(170.dp)
                     .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFD0E5F0)) // Replace with your actual background
-                    .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
+                    .background(Color(0xFFD0E5F0))
+                    .padding(horizontal = 12.dp, vertical = 8.dp)
             ) {
-                Column {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    // Circular Icon
+                    Box(
+                        modifier = Modifier
+                            .size(40.dp)
+                            .clip(CircleShape),
+                        contentAlignment = Alignment.Center
                     ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.img_6),
+                            contentDescription = "Cat icon",
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(Color.White, shape = CircleShape)
+                                .clip(CircleShape)
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    // Text Content
+                    Column {
                         Text(
                             text = "2M 12K",
-                            modifier = Modifier
-                                .width(59.dp)
-                                .height(24.dp),
                             style = TextStyle(
                                 fontWeight = FontWeight.SemiBold,
                                 fontSize = 16.sp,
-                                lineHeight = 16.sp,
-                                letterSpacing = 0.5.sp,
-                                textAlign = TextAlign.Center,
-                                color = Color(0x99121212) // #12121299
+                                color = Color(0xFF121212)
+                            )
+                        )
+                        Text(
+                            text = "No. of quarrels",
+                            style = TextStyle(
+                                fontWeight = FontWeight.Medium,
+                                fontSize = 12.sp,
+                                color = Color(0x5E121212)
                             )
                         )
                     }
 
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Text(
-                            text = "No. of quarrels",
-                            modifier = Modifier
-                                .width(88.dp)
-                                .height(18.dp),
-                            style = TextStyle(
-                                fontWeight = FontWeight.Medium,
-                                fontSize = 12.sp,
-                                lineHeight = 12.sp,
-                                letterSpacing = 0.5.sp,
-                                textAlign = TextAlign.Center,
-                                color = Color(0x5E121212) // #1212125E
-                            )
-                        )
-                    }
+
                 }
             }
             Box(
-                modifier = Modifier.offset(x=1.dp)
+                modifier = Modifier
                     .width(170.dp)
                     .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFD0E5F0)) // Replace with your actual background
-                    .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
+                    .background(Color(0xFFDEEECD)) // Light green background
+                    .padding(horizontal = 12.dp, vertical = 8.dp)
             ) {
-                Column {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
+                Column() {
+                    Box(
+                        modifier = Modifier
+                            .size(40.dp)
+                            .clip(CircleShape),
+                        contentAlignment = Alignment.Center
                     ) {
-                        Text(
-                            text = "2M 12K",
+                        Image(
+                            painter = painterResource(id = R.drawable.img_7),
+                            contentDescription = "Cat icon",
                             modifier = Modifier
-                                .width(59.dp)
-                                .height(24.dp),
-                            style = TextStyle(
-                                fontWeight = FontWeight.SemiBold,
-                                fontSize = 16.sp,
-                                lineHeight = 16.sp,
-                                letterSpacing = 0.5.sp,
-                                textAlign = TextAlign.Center,
-                                color = Color(0x99121212) // #12121299
-                            )
+                                .fillMaxSize()
+                                .background(Color.White, shape = CircleShape)
+                                .clip(CircleShape)
                         )
                     }
-
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Text(
-                            text = "No. of quarrels",
-                            modifier = Modifier
-                                .width(88.dp)
-                                .height(18.dp),
-                            style = TextStyle(
-                                fontWeight = FontWeight.Medium,
-                                fontSize = 12.sp,
-                                lineHeight = 12.sp,
-                                letterSpacing = 0.5.sp,
-                                textAlign = TextAlign.Center,
-                                color = Color(0x5E121212) // #1212125E
-                            )
+                }
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = "+500 h",
+                        style = TextStyle(
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 16.sp,
+                            color = Color(0x99121212) // #121212 with 60% opacity
                         )
-                    }
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = "Chase time",
+                        style = TextStyle(
+                            fontWeight = FontWeight.Medium,
+                            fontSize = 12.sp,
+                            color = Color(0x5E121212) // #121212 with 37% opacity
+                        )
+                    )
                 }
             }
 
@@ -156,7 +165,7 @@ fun secondUi() {
         ) {
             Box(
                 modifier = Modifier
-                    .offset(y=73.dp)
+                    .offset(y = 73.dp)
                     .width(170.dp)
                     .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
@@ -206,7 +215,8 @@ fun secondUi() {
                 }
             }
             Box(
-                modifier = Modifier.offset(y=75.dp)
+                modifier = Modifier
+                    .offset(y = 73.dp)
                     .width(170.dp)
                     .height(65.dp)
                     .clip(RoundedCornerShape(12.dp))
@@ -265,6 +275,7 @@ fun secondUi() {
     }
 
 }
+
 @Preview
 @Composable
 fun secondUiPreview() {

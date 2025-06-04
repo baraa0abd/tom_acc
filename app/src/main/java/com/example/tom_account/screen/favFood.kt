@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
@@ -35,33 +36,33 @@ fun fav_food() {
             .width(360.dp)
             .height(182.dp)
             .padding(8.dp)
-            .offset(y=350.dp)
+            .offset(y=370.dp)
     ) {
         Column(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.size(360.dp, 200.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            // Title Row
             Row(
                 modifier = Modifier
-
-                    .width(120.dp)
+                    .width(165.dp)
                     .height(30.dp),
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.End // Align content to the right in the Row
             ) {
                 Text(
-                    text = "Tom settings",
+                    text = "His favorite foods",
+                    textAlign = TextAlign.Right,
                     style = TextStyle(
-                        fontFamily = FontFamily.SansSerif, // Replace with IBM Plex if imported
                         fontWeight = FontWeight.Bold,
                         fontSize = 20.sp,
                         lineHeight = 20.sp,
                         letterSpacing = 0.sp,
-                        textAlign = TextAlign.Right,
-                        color = Color(0xDE1F1F1E) // #1F1F1EDE
-                    )
+                        color = Color(0xDE1F1F1E)
+                    ),
+                    modifier = Modifier.fillMaxWidth() // Ensures right alignment is respected
                 )
             }
+
 
             // Settings Item Row
             Row(
@@ -82,7 +83,7 @@ fun fav_food() {
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.img),
+                        painter = painterResource(id = R.drawable.img_3),
                         contentDescription = "Your image description",
                         modifier = Modifier
                             .size(24.dp)
@@ -100,7 +101,7 @@ fun fav_food() {
                     contentAlignment = Alignment.CenterStart
                 ) {
                     Text(
-                        text = "Change sleeping place",
+                        text = "Mouses",
                         style = TextStyle(
                             fontFamily = FontFamily.SansSerif, // Replace with IBM Plex
                             fontWeight = FontWeight.Medium,
@@ -126,18 +127,17 @@ fun fav_food() {
                     modifier = Modifier
                         .size(40.dp)
                         .clip(RoundedCornerShape(8.dp))
-                        .background(Color.White), // Replace with actual icon or image
+                        .background(Color.White)
+                        .offset(x = 1.25.dp, y = 3.25.dp), // Optional if you want to mimic top/left
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.img_2),
+                        painter = painterResource(id = R.drawable.img_4),
                         contentDescription = "Your image description",
                         modifier = Modifier
-                            .size(40.dp)
-                            .background(Color.White),
-
-                        )
-
+                            .size(24.dp)
+                            .background(Color.White)
+                    )
                 }
 
                 // Text Box
@@ -148,7 +148,7 @@ fun fav_food() {
                     contentAlignment = Alignment.CenterStart
                 ) {
                     Text(
-                        text = "Meow settings",
+                        text = "Last stolen meal",
                         style = TextStyle(
                             fontFamily = FontFamily.SansSerif, // Replace with IBM Plex
                             fontWeight = FontWeight.Medium,
@@ -174,18 +174,17 @@ fun fav_food() {
                     modifier = Modifier
                         .size(40.dp)
                         .clip(RoundedCornerShape(8.dp))
-                        .background(Color.White), // Replace with actual icon or image
+                        .background(Color.White)
+                        .offset(x = 1.25.dp, y = 3.dp), // Optional if you want to mimic top/left
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.img_1),
+                        painter = painterResource(id = R.drawable.img_5),
                         contentDescription = "Your image description",
                         modifier = Modifier
-                            .size(40.dp)
-                            .background(Color.White),
-
-                        )
-
+                            .size(24.dp)
+                            .background(Color.White)
+                    )
                 }
 
                 // Text Box
@@ -196,7 +195,7 @@ fun fav_food() {
                     contentAlignment = Alignment.CenterStart
                 ) {
                     Text(
-                        text = "Password to open the fridge",
+                        text = "Change sleep mood",
                         style = TextStyle(
                             fontFamily = FontFamily.SansSerif, // Replace with IBM Plex
                             fontWeight = FontWeight.Medium,
