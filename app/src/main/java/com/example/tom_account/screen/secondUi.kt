@@ -87,7 +87,7 @@ fun secondUi() {
                             style = TextStyle(
                                 fontWeight = FontWeight.SemiBold,
                                 fontSize = 16.sp,
-                                color = Color(0xFF121212)
+                                color = Color(0x99121212) // #121212 with 60% opacity
                             )
                         )
                         Text(
