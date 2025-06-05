@@ -35,7 +35,7 @@ fun TopUi() {
 
     Box(
         modifier = Modifier
-            .size(500.dp, 250.dp)
+            .size(1000.dp, 500.dp)
 
             .background(Color(0xFF226993)),
         contentAlignment = Alignment.TopCenter
