@@ -32,7 +32,7 @@ import com.example.tom_account.R
 
 @Composable
 fun TopUi() {
-    // Outer blue Box - matching target dimensions and removing the y-offset
+
     Box(
         modifier = Modifier
             .size(500.dp, 250.dp)

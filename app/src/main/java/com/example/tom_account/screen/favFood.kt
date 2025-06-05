@@ -30,6 +30,19 @@ import androidx.compose.ui.unit.sp
 import com.example.tom_account.R
 
 @Composable
+fun LineDivider() {
+    Box(
+        modifier = Modifier
+            .offset(y=360.dp)
+            .fillMaxWidth()
+            .height(1.dp)  // 1px height
+            .background(
+                color = Color(0x14001A1F),  // #001A1F with 8% opacity (0x14 alpha)
+                shape = RoundedCornerShape(0.dp)  // No rounding for straight line
+            )
+    )
+}
+@Composable
 fun fav_food() {
     Box(
         modifier = Modifier
@@ -128,14 +141,14 @@ fun fav_food() {
                         .size(40.dp)
                         .clip(RoundedCornerShape(8.dp))
                         .background(Color.White)
-                        .offset(x = 1.25.dp, y = 3.25.dp), // Optional if you want to mimic top/left
+                        .offset(x = 1.25.dp, y = 3.dp), // Optional if you want to mimic top/left
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.img_4),
                         contentDescription = "Your image description",
                         modifier = Modifier
-                            .size(24.dp)
+                            .size(22.dp)
                             .background(Color.White)
 
                     )
