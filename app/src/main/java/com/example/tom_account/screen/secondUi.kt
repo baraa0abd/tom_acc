@@ -36,24 +36,22 @@ import com.example.tom_account.R
 fun secondUi() {
     Box(
         modifier = Modifier
-            .size(width = 1550.dp, height = 1550.dp)
-            .offset(y = 206.dp)
+            .size(width = 660.dp, height = 621.dp)
             .clip(RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp))
             .background(Color(0xFFEEF4F6))
     )
     {
         Row(
             modifier = Modifier
-                .offset(x = 16.dp)
-                .padding(top = 23.dp, start = 16.dp)
-                .width(350.dp)
-                .height(150.dp),
+                .offset(x = 16.dp , y=23.dp)
+                .width(328.dp)
+                .height(124.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Box(
                 modifier = Modifier
-                    .width(170.dp)
-                    .height(65.dp)
+                    .width(160.dp)
+                    .height(58.dp)
                     .clip(RoundedCornerShape(12.dp))
                     .background(Color(0xFFD0E5F0))
                     .padding(horizontal = 12.dp, vertical = 8.dp)
@@ -105,11 +103,10 @@ fun secondUi() {
             }
             Box(
                 modifier = Modifier
-                    .width(170.dp)
-                    .height(65.dp)
+                    .width(160.dp)
+                    .height(58.dp)
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFDEEECD)) // Light green background
-                    .padding(horizontal = 12.dp, vertical = 8.dp)
+                    .background(Color(0xFFDEEECD))                    .padding(horizontal = 12.dp, vertical = 8.dp)
             ) {
                 Column() {
                     Box(
@@ -129,7 +126,9 @@ fun secondUi() {
                     }
                 }
                 Column(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier
+                        .offset(x=15.dp)
+                        .fillMaxSize(),
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -158,10 +157,9 @@ fun secondUi() {
         }
         Row(
             modifier = Modifier
-                .offset(16.dp)
-                .padding(top = 23.dp, start = 16.dp)
-                .width(350.dp)
-                .height(150.dp),
+                .offset(x = 16.dp , y=23.dp)
+                .width(328.dp)
+                .height(124.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
 
@@ -245,7 +243,7 @@ fun secondUi() {
                 }
                 Column(
                     modifier = Modifier
-                        .offset(5.dp)
+                        .offset(15.dp)
                         .fillMaxSize(),
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
