@@ -10,16 +10,22 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -31,6 +37,59 @@ import androidx.compose.ui.unit.sp
 import com.example.tom_account.R
 
 @Composable
+fun adding() {
+    Box(
+        modifier = Modifier
+            .width(631.2524160384561.dp)  // Exact width
+            .height(277.5324625384211.dp)  // Exact height
+            .offset(
+                x = -131.82.dp,  // Left offset
+                y = (-57.82).dp  // Top offset (negative)
+            )
+            .rotate(-32.2f)  // Negative rotation angle
+            .background(
+                brush = Brush.linearGradient(
+                    colors = listOf(
+                        Color.White.copy(alpha = 0.23f),  // rgba(255, 255, 255, 0.32)
+                        Color.White.copy(alpha = 0f)      // rgba(255, 255, 255, 0)
+                    )
+                )
+            )
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.img_10),
+            contentDescription = "Your image description",
+
+            )
+    }
+
+    Box(
+        modifier = Modifier
+            .width(809.6139033819642.dp)
+            .height(308.0567356207359.dp)
+            .offset(
+                x = (80.65).dp,  // Left offset (negative)
+                y = (-160.51).dp   // Top offset (negative)
+            )
+            .rotate(32.92f)  // Positive rotation angle
+            .background(
+                brush = Brush.linearGradient(
+                    colors = listOf(
+                        Color.White.copy(alpha = 0.32f),
+                        Color.White.copy(alpha = 0f)
+                    )
+                )
+            )
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.img_11),
+            contentDescription = "Your image description",
+        )
+    }
+
+}
+
+@Composable
 fun TopUi() {
 
     Box(
@@ -40,6 +99,7 @@ fun TopUi() {
             .background(Color(0xFF226993)),
         contentAlignment = Alignment.TopCenter
     ) {
+        adding()
         Box(
             modifier = Modifier
                 .size(width = 113.dp, height = 170.dp) // Correctly sets width and height
@@ -93,7 +153,8 @@ fun TopUi() {
                     }
                 }
                 Box(
-                    modifier = Modifier.offset(y=-12.dp)
+                    modifier = Modifier
+                        .offset(y = -12.dp)
                         .size(113.dp, 18.dp)
                 ) {
                     Row(
@@ -120,7 +181,8 @@ fun TopUi() {
 //                border-radius: 40px;
 
                 Box(
-                    modifier = Modifier.offset(y=-7.dp)
+                    modifier = Modifier
+                        .offset(y = -7.dp)
                         .size(width = 97.dp, height = 25.dp)
                         .clip(RoundedCornerShape(40.dp))
                 ) {

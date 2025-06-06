@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.sp
 fun buttom(){
     Box(
         modifier = Modifier
-            .offset(190.dp,825.dp)
+            .offset(170.dp,825.dp)
             .size(width = 56.dp, height = 18.dp),
         contentAlignment = Alignment.Center
     ) {
